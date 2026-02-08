@@ -31,7 +31,6 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      position: relative;
     }
 
     .badge {
@@ -73,7 +72,6 @@
       font-weight: 600;
       transition: 0.25s;
       background: linear-gradient(180deg, rgba(37,99,235,0.08), transparent);
-      cursor: pointer;
     }
 
     .btn.primary {
@@ -113,8 +111,6 @@
       padding: 26px;
       border-radius: 16px;
       transition: 0.25s;
-      position: relative;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -142,13 +138,6 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 13px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .card-link:hover {
-      text-decoration: underline;
     }
 
     .system-block {
@@ -194,6 +183,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
 
@@ -201,45 +191,57 @@
       <span class="badge">Engineering Leadership & Technology Strategy</span>
       <h1>Thiago Piellusch</h1>
       <h2>
-        <h2>
-  Liderança de times multidisciplinares focada em <strong>Transformação Digital</strong> e <strong>Hiperautomação</strong>, convertendo cenários operacionais complexos em ecossistemas de alta performance através de <strong>IA e Inovação</strong>.
-</h2>
+        Liderança de times multidisciplinares focada em <strong>Transformação Digital</strong> e <strong>Hiperautomação</strong>.
+        Atuação na unificação de ecossistemas complexos, desenho de arquiteturas escaláveis e maximização de ROI através de
+        <strong>IA, Plataformas Digitais e Estratégias Omnichannel</strong>.
       </h2>
 
       <div class="buttons">
         <a class="btn primary" href="https://github.com/thiagopiellusch" target="_blank">GitHub</a>
-        <a class="btn" href="#cases">Experiência</a>
+        <a class="btn" href="#cases">Experiência & ROI</a>
         <a class="btn" href="#ecosystem">Ecossistema Técnico</a>
-        <a class="btn" href="#vision">Visão</a>
+        <a class="btn" href="#vision">Visão Estratégica</a>
       </div>
     </header>
 
     <div class="system-block">
-      <div class="system-title">Engineering Focus Areas</div>
+      <div class="system-title">Áreas-Chave de Atuação</div>
       <div class="system-grid">
-        <div class="system-item">Architecture & Integration</div>
-        <div class="system-item">Digital Transformation</div>
-        <div class="system-item">Tech Leadership & Culture</div>
-        <div class="system-item">Scalability & Governance</div>
-        <div class="system-item">AI & Hyper-automation</div>
-        <div class="system-item">Enterprise Strategy</div>
+        <div class="system-item">Unificação de Ecossistemas & M&A</div>
+        <div class="system-item">Arquitetura de Integração & iPaaS</div>
+        <div class="system-item">Plataformas Digitais & Omnichannel</div>
+        <div class="system-item">Hiperautomação & IA Aplicada</div>
+        <div class="system-item">Modernização de Sistemas Core</div>
+        <div class="system-item">Engenharia Orientada a ROI</div>
       </div>
     </div>
 
     <section id="cases">
-      <h2>Transformação Digital & ROI</h2>
+      <h2>Geração de Valor & Casos Reais</h2>
       <div class="grid">
         <div class="card">
-          <h3>Hiperautomação (iPaaS)</h3>
-          <p>Implementação de Jitterbit para padronização de +200 integrações, eliminando passivos técnicos e viabilizando arquitetura plug-and-play.</p>
+          <h3>Unificação de Ecossistemas em Escala (M&A)</h3>
+          <p>
+            Liderança técnica e estratégica na consolidação de múltiplas empresas e unidades de negócio,
+            utilizando arquiteturas orientadas a integração e iPaaS para padronizar centenas de fluxos críticos
+            e acelerar o time-to-market.
+          </p>
         </div>
+
         <div class="card">
-          <h3>IA Generativa (ANI 2.0)</h3>
-          <p>Liderança do roadmap de IA com LLMs e Visão Computacional, reduzindo drasticamente o transbordo manual e otimizando a jornada do colaborador.</p>
+          <h3>Plataformas Digitais & Estratégia Omnichannel</h3>
+          <p>
+            Desenho de arquiteturas para e-commerces B2B e B2C de alta transacionalidade,
+            integrando ERPs, OMS, logística e CRM para viabilizar estoque unificado e visão 360º do cliente.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Escala Omnichannel</h3>
-          <p>Coordenação técnica de plataformas B2B e B2C integradas a ERPs, assegurando estabilidade em operações de escala nacional.</p>
+          <h3>Hiperautomação & Automação Cognitiva</h3>
+          <p>
+            Reengenharia de processos operacionais através de integrações, RPA, Agentes de IA e Visão Computacional,
+            reduzindo custos operacionais e permitindo crescimento sem aumento proporcional de headcount.
+          </p>
         </div>
       </div>
     </section>
@@ -247,60 +249,60 @@
     <section id="ecosystem">
       <h2>Engineering Ecosystem</h2>
       <div class="grid">
-        
+
         <div class="card">
           <div>
-            <span class="badge" style="font-size: 10px;">Execution</span>
+            <span class="badge" style="font-size: 10px;">Execução Técnica</span>
             <h3>Finance Tracker v2</h3>
-            <p>Demonstração de Clean Architecture e resiliência em sistemas full-stack desacoplados.</p>
+            <p>Sistema full-stack demonstrando decisões arquiteturais voltadas a desacoplamento, resiliência e integridade de dados.</p>
           </div>
-          <a href="https://github.com/thiagopiellusch/finance-tracker-v2" target="_blank" class="card-link">Explorar repositório →</a>
+          <a class="card-link" href="https://github.com/thiagopiellusch/finance-tracker-v2" target="_blank">Explorar repositório →</a>
         </div>
 
         <div class="card">
           <div>
-            <span class="badge" style="font-size: 10px;">Leadership</span>
+            <span class="badge" style="font-size: 10px;">Liderança</span>
             <h3>Engineering Playbook</h3>
-            <p>Framework de liderança técnica: métricas de performance, PDIs e cultura de alta performance.</p>
+            <p>Framework de liderança técnica: rituais, PDIs, métricas de performance e cultura de alta performance.</p>
           </div>
-          <a href="https://github.com/thiagopiellusch/engineering-playbook" target="_blank" class="card-link">Explorar repositório →</a>
+          <a class="card-link" href="https://github.com/thiagopiellusch/engineering-playbook" target="_blank">Explorar repositório →</a>
         </div>
 
         <div class="card">
           <div>
-            <span class="badge" style="font-size: 10px;">Strategy</span>
+            <span class="badge" style="font-size: 10px;">Estratégia Digital</span>
             <h3>Tech Strategy Notes</h3>
-            <p>Reflexões sobre transformação digital, IA First e o impacto da tecnologia no resultado do negócio.</p>
+            <p>Reflexões sobre transformação digital, arquiteturas omnichannel, IA aplicada e impacto no Ebitda.</p>
           </div>
-          <a href="https://github.com/thiagopiellusch/tech-strategy-notes" target="_blank" class="card-link">Explorar repositório →</a>
+          <a class="card-link" href="https://github.com/thiagopiellusch/tech-strategy-notes" target="_blank">Explorar repositório →</a>
         </div>
 
         <div class="card">
           <div>
-            <span class="badge" style="font-size: 10px;">Architecture</span>
+            <span class="badge" style="font-size: 10px;">Arquitetura</span>
             <h3>Architecture Lab</h3>
-            <p>Documentação de ADRs, decisões técnicas e experimentos com infraestrutura escalável.</p>
+            <p>Documentação de ADRs, padrões de integração corporativa e estratégias de escalabilidade.</p>
           </div>
-          <a href="https://github.com/thiagopiellusch/architecture-lab" target="_blank" class="card-link">Explorar repositório →</a>
+          <a class="card-link" href="https://github.com/thiagopiellusch/architecture-lab" target="_blank">Explorar repositório →</a>
         </div>
 
       </div>
     </section>
 
     <section id="vision">
-      <h2>Visão de Tecnologia</h2>
+      <h2>Visão Tecnológica</h2>
       <div class="grid">
         <div class="card">
-          <h3>Cultura IA First</h3>
-          <p>Garantir que a tecnologia atue como amplificadora do talento humano, elevando a maturidade digital das equipes.</p>
+          <h3>Cultura AI-First</h3>
+          <p>IA aplicada de forma pragmática para amplificar o talento humano e gerar vantagem competitiva sustentável.</p>
         </div>
         <div class="card">
-          <h3>Engenharia Orientada a Valor</h3>
-          <p>Decisões tecnológicas devem estar conectadas ao ROI e aos objetivos estratégicos da organização.</p>
+          <h3>Arquitetura como Alavanca de Negócio</h3>
+          <p>Sistemas desacoplados, governáveis e orientados a integração como base para crescimento e resiliência.</p>
         </div>
         <div class="card">
-          <h3>Escalabilidade Sustentável</h3>
-          <p>Arquitetura e governança como pilares para o crescimento contínuo sem aumento proporcional de custos operacionais.</p>
+          <h3>Engenharia Orientada a Resultado</h3>
+          <p>Decisões técnicas pautadas por ROI, mitigação de riscos e alinhamento estratégico com o board.</p>
         </div>
       </div>
     </section>
