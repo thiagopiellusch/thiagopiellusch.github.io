@@ -3,105 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thiago Tavares | Coordenação de Engenharia</title>
+<title>Thiago Tavares — Engineering Leadership</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
 :root {
-  --bg: #0b0f19;
-  --card: #111827;
-  --primary: #3b82f6;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --border: #1f2933;
+  --bg: #05070f;
+  --panel: #0b1020;
+  --line: #11172a;
+  --primary: #00e5ff;
+  --secondary: #7c3aed;
+  --text: #e2e8f0;
+  --muted: #64748b;
 }
-* { box-sizing: border-box; }
-body {
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Inter, Arial, sans-serif;
-  background: linear-gradient(180deg, #0b0f19 0%, #020617 100%);
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(800px 400px at 10% 10%, rgba(0,229,255,0.08), transparent),
+              radial-gradient(600px 300px at 90% 20%, rgba(124,58,237,0.08), transparent),
+              var(--bg);
   color: var(--text);
 }
+
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-  padding: 60px 24px;
+  padding: 60px 28px;
 }
-.hero {
+
+.header {
   display: grid;
-  gap: 24px;
+  gap: 18px;
 }
-h1 {
-  font-size: 42px;
-  margin: 0;
+
+.name {
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
-.subtitle {
+
+.role {
   font-size: 18px;
   color: var(--muted);
   max-width: 700px;
 }
-.badges {
+
+.tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 12px;
+  margin-top: 10px;
 }
-.badge {
+
+.tag {
+  font-size: 12px;
   padding: 6px 12px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-size: 13px;
-  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(0,229,255,0.05), transparent);
 }
+
 .section {
   margin-top: 80px;
 }
-.section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: var(--primary);
+  letter-spacing: 0.5px;
 }
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+
 .card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px;
-  transition: 0.2s ease;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent),
+              var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease;
 }
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(0,229,255,0.12), transparent);
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
 .card:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary);
+  transform: translateY(-6px);
+  border-color: rgba(0,229,255,0.4);
 }
+
 .card h3 {
-  margin: 0 0 10px 0;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
+
 .card p {
-  margin: 0 0 12px 0;
-  color: var(--muted);
   font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
 }
+
 .card a {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
   color: var(--primary);
   text-decoration: none;
-  font-size: 14px;
 }
+
 .timeline {
   display: grid;
-  gap: 16px;
+  gap: 18px;
 }
+
 .item {
-  padding: 16px;
-  border-left: 3px solid var(--primary);
-  background: var(--card);
-  border-radius: 8px;
-}
-.footer {
-  margin-top: 80px;
-  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
   font-size: 14px;
+  line-height: 1.6;
 }
+
+.footer {
+  margin-top: 100px;
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
 .footer a {
   color: var(--primary);
   text-decoration: none;
@@ -112,71 +168,67 @@ h1 {
 
 <div class="container">
 
-  <div class="hero">
-    <h1>Thiago Tavares</h1>
-    <div class="subtitle">
-      Coordenação de Engenharia, Arquitetura de Software e Liderança Técnica.  
-      Atuação na construção de plataformas digitais, integração de sistemas e desenvolvimento de times de alta performance.
+  <div class="header">
+    <div class="name">Thiago Tavares</div>
+    <div class="role">
+      Engineering Leadership • Arquitetura de Software • Estratégia Tecnológica • Produto Digital
     </div>
-
-    <div class="badges">
-      <div class="badge">Tech Leadership</div>
-      <div class="badge">Arquitetura Escalável</div>
-      <div class="badge">APIs & Integrações</div>
-      <div class="badge">Produto Digital</div>
-      <div class="badge">Agile & Delivery</div>
+    <div class="tech-tags">
+      <div class="tag">Tech Leadership</div>
+      <div class="tag">System Architecture</div>
+      <div class="tag">APIs & Integrations</div>
+      <div class="tag">Cloud & DevOps</div>
+      <div class="tag">AI & Automation</div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Projetos Estratégicos</h2>
+    <div class="section-title">Strategic Engineering Projects</div>
     <div class="grid">
       <div class="card">
         <h3>Architecture Lab</h3>
-        <p>Estudos práticos de arquitetura de software, design de sistemas e decisões técnicas em escala corporativa.</p>
-        <a href="https://github.com/thiagopiellusch/architecture-lab" target="_blank">Ver repositório →</a>
+        <p>Exploração de padrões arquiteturais, design de sistemas e decisões técnicas em contextos corporativos.</p>
+        <a href="https://github.com/thiagopiellusch/architecture-lab" target="_blank">Open repository →</a>
       </div>
+
       <div class="card">
         <h3>Tech Strategy Notes</h3>
-        <p>Visão estratégica de tecnologia, governança, produto e tomada de decisão técnica.</p>
-        <a href="https://github.com/thiagopiellusch/tech-strategy-notes" target="_blank">Ver repositório →</a>
+        <p>Insights sobre governança técnica, produto digital, escalabilidade organizacional e estratégia de tecnologia.</p>
+        <a href="https://github.com/thiagopiellusch/tech-strategy-notes" target="_blank">Open repository →</a>
       </div>
+
       <div class="card">
         <h3>Engineering Playbook</h3>
-        <p>Modelo de liderança de engenharia, cultura técnica, processos e métricas de times de tecnologia.</p>
-        <a href="https://github.com/thiagopiellusch/engineering-playbook" target="_blank">Ver repositório →</a>
+        <p>Framework de liderança técnica, cultura de engenharia, métricas e processos de times de tecnologia.</p>
+        <a href="https://github.com/thiagopiellusch/engineering-playbook" target="_blank">Open repository →</a>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Trajetória Profissional</h2>
+    <div class="section-title">Professional Journey</div>
     <div class="timeline">
       <div class="item">
         <strong>Coordenação de Sistemas — Verzani & Sandrini</strong><br>
-        Liderança de times de engenharia, arquitetura e automação, com foco em inovação e integração corporativa.
+        Liderança de iniciativas de inovação, IA e integração corporativa.
       </div>
       <div class="item">
         <strong>Service Delivery Manager / Tech Lead — Lojas Renner</strong><br>
-        Evolução de plataformas digitais, gestão de serviços críticos e alinhamento entre tecnologia e negócio.
+        Evolução de plataformas digitais e alinhamento entre tecnologia e negócio.
       </div>
       <div class="item">
         <strong>Tech Lead — Nagumo</strong><br>
-        Construção de e-commerce e ecossistema digital integrado a sistemas corporativos.
+        Construção de ecossistema digital e e-commerce integrado.
       </div>
     </div>
   </div>
 
-  <div class="section">
-    <h2>Contato</h2>
-    <p>
-      GitHub: <a href="https://github.com/thiagopiellusch" target="_blank">github.com/thiagopiellusch</a><br>
-      LinkedIn: <a href="https://linkedin.com/in/SEU-LINK" target="_blank">linkedin.com/in/...</a>
-    </p>
-  </div>
-
   <div class="footer">
-    © Thiago Tavares — Engineering & Technology Leadership
+    <div>© 2026 — Engineering Leadership Profile</div>
+    <div>
+      <a href="https://github.com/thiagopiellusch" target="_blank">GitHub</a> ·
+      <a href="https://linkedin.com/in/thiago-ptavares" target="_blank">LinkedIn</a>
+    </div>
   </div>
 
 </div>
