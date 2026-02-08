@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiago Piellusch | Coordenação de Tecnologia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .badge {
+      color: #60a5fa;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #f9fafb;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: #9ca3af;
+      max-width: 720px;
+      margin-top: 12px;
+    }
+
+    .buttons {
+      margin-top: 32px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid #2563eb;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .btn.primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    section {
+      margin-top: 80px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      padding: 24px;
+      border-radius: 14px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: #2563eb;
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #f9fafb;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #9ca3af;
+      font-size: 15px;
+    }
+
+    footer {
+      margin-top: 100px;
+      color: #6b7280;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <header>
+      <span class="badge">Coordenação de Engenharia & Tecnologia</span>
+      <h1>Thiago Piellusch</h1>
+      <h2>
+        Coordeno tecnologia, lidero times e desenho arquiteturas digitais que conectam estratégia de negócio com execução técnica.
+      </h2>
+
+      <div class="buttons">
+        <a class="btn primary" href="https://github.com/thiagopiellusch" target="_blank">GitHub</a>
+        <a class="btn" href="#cases">Ver Cases</a>
+        <a class="btn" href="#vision">Visão de Tecnologia</a>
+      </div>
+    </header>
+
+    <!-- O QUE EU FAÇO -->
+    <section>
+      <h2>O que eu faço</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Estratégia Tecnológica</h3>
+          <p>Definição de roadmaps, decisões arquiteturais e alinhamento entre tecnologia e objetivos de negócio.</p>
+        </div>
+        <div class="card">
+          <h3>Liderança de Times</h3>
+          <p>Desenvolvimento de pessoas, cultura de engenharia e construção de times de alta performance.</p>
+        </div>
+        <div class="card">
+          <h3>Arquitetura & Integrações</h3>
+          <p>Desenho de ecossistemas digitais, APIs e integrações corporativas em ambientes complexos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+      <h2>Experiência & Cases</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Transformação Digital Corporativa</h3>
+          <p>Coordenação de iniciativas de inovação, IA e modernização de integrações em ambiente corporativo.</p>
+        </div>
+        <div class="card">
+          <h3>Escala Omnichannel</h3>
+          <p>Liderança técnica em plataformas digitais B2B, B2C e marketplace em escala nacional.</p>
+        </div>
+        <div class="card">
+          <h3>Construção de Plataformas Digitais</h3>
+          <p>Criação e evolução de ecossistemas de e-commerce e integrações com sistemas corporativos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISÃO -->
+    <section id="vision">
+      <h2>Visão de Tecnologia</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Tecnologia como Estratégia</h3>
+          <p>Código resolve problemas. Arquitetura resolve o futuro. Liderança resolve pessoas.</p>
+        </div>
+        <div class="card">
+          <h3>Produto & Engenharia</h3>
+          <p>Tecnologia deve ser orientada a produto, dados e impacto real no negócio.</p>
+        </div>
+        <div class="card">
+          <h3>Escala & Governança</h3>
+          <p>Arquitetura, processos e métricas como base para crescimento sustentável.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 — Thiago Piellusch | Coordenação de Tecnologia
+    </footer>
+
+  </div>
+</body>
+</html>
