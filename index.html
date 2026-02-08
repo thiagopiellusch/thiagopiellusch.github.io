@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" style="scroll-behavior: smooth;">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -73,6 +73,7 @@
       font-weight: 600;
       transition: 0.25s;
       background: linear-gradient(180deg, rgba(37,99,235,0.08), transparent);
+      cursor: pointer;
     }
 
     .btn.primary {
@@ -84,6 +85,7 @@
     .btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 30px rgba(37,99,235,0.15);
+      background: rgba(37,99,235,0.15);
     }
 
     section {
@@ -95,13 +97,13 @@
       font-weight: 600;
       color: #e5e7eb;
       letter-spacing: 0.3px;
+      margin-bottom: 20px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 26px;
-      margin-top: 26px;
     }
 
     .card {
@@ -113,19 +115,9 @@
       transition: 0.25s;
       position: relative;
       overflow: hidden;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent, rgba(37,99,235,0.12), transparent);
-      opacity: 0;
-      transition: 0.25s;
-    }
-
-    .card:hover::before {
-      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card:hover {
@@ -141,7 +133,22 @@
 
     .card p {
       color: #9ca3af;
-      font-size: 15px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .card-link {
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .card-link:hover {
+      text-decoration: underline;
     }
 
     /* BLOCO HI-TECH */
@@ -152,8 +159,6 @@
       background: linear-gradient(180deg, rgba(37,99,235,0.08), transparent),
                   #020617;
       border: 1px solid #1e293b;
-      display: grid;
-      gap: 14px;
     }
 
     .system-title {
@@ -161,22 +166,23 @@
       color: #60a5fa;
       letter-spacing: 1px;
       text-transform: uppercase;
+      margin-bottom: 15px;
     }
 
     .system-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 14px;
-      margin-top: 10px;
     }
 
     .system-item {
-      background: #020617;
+      background: rgba(30, 41, 59, 0.5);
       border: 1px solid #1e293b;
       padding: 14px;
       border-radius: 10px;
       font-size: 13px;
       color: #9ca3af;
+      text-align: center;
     }
 
     footer {
@@ -185,14 +191,13 @@
       font-size: 14px;
       text-align: center;
       border-top: 1px solid #1e293b;
-      padding-top: 26px;
+      padding: 40px 0;
     }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- HERO -->
     <header>
       <span class="badge">Engineering Leadership & Technology Strategy</span>
       <h1>Thiago Piellusch</h1>
@@ -202,12 +207,12 @@
 
       <div class="buttons">
         <a class="btn primary" href="https://github.com/thiagopiellusch" target="_blank">GitHub</a>
-        <a class="btn" href="#cases">Cases</a>
-        <a class="btn" href="#vision">Visão de Tecnologia</a>
+        <a class="btn" href="#cases">Experiência</a>
+        <a class="btn" href="#ecosystem">Ecossistema Técnico</a>
+        <a class="btn" href="#vision">Visão</a>
       </div>
     </header>
 
-    <!-- BLOCO HI-TECH -->
     <div class="system-block">
       <div class="system-title">Engineering Focus Areas</div>
       <div class="system-grid">
@@ -220,31 +225,11 @@
       </div>
     </div>
 
-    <!-- O QUE EU FAÇO -->
-    <section>
-      <h2>O que eu faço</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Estratégia Tecnológica</h3>
-          <p>Definição de roadmaps, decisões arquiteturais e alinhamento entre tecnologia e objetivos de negócio.</p>
-        </div>
-        <div class="card">
-          <h3>Liderança de Times</h3>
-          <p>Desenvolvimento de pessoas, cultura de engenharia e construção de times de alta performance.</p>
-        </div>
-        <div class="card">
-          <h3>Arquitetura & Integrações</h3>
-          <p>Desenho de ecossistemas digitais, APIs e integrações corporativas em ambientes complexos.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASES -->
     <section id="cases">
       <h2>Experiência & Cases</h2>
       <div class="grid">
         <div class="card">
-          <h3>Transformação Digital Corporativa</h3>
+          <h3>Transformação Digital</h3>
           <p>Coordenação de iniciativas de inovação, IA e modernização de integrações em ambiente corporativo.</p>
         </div>
         <div class="card">
@@ -258,64 +243,49 @@
       </div>
     </section>
 
-        <!-- ENGINEERING ECOSYSTEM -->
     <section id="ecosystem">
       <h2>Engineering Ecosystem</h2>
       <div class="grid">
         
         <div class="card">
-          <h3>Architecture Lab</h3>
-          <p>
-            Laboratório de arquitetura onde exploro padrões, decisões técnicas e modelos de sistemas escaláveis.
-          </p>
-          <p>
-            <a href="https://github.com/thiagopiellusch/architecture-lab" target="_blank" style="color:#60a5fa; text-decoration:none; font-weight:600;">
-              Explorar repositório →
-            </a>
-          </p>
+          <div>
+            <span class="badge" style="font-size: 10px;">Execution</span>
+            <h3>Finance Tracker v2</h3>
+            <p>Sistema financeiro full-stack que demonstra arquitetura limpa, APIs resilientes e visão de produto.</p>
+          </div>
+          <a href="https://github.com/thiagopiellusch/finance-tracker-v2" target="_blank" class="card-link">Explorar repositório →</a>
         </div>
 
         <div class="card">
-          <h3>Engineering Playbook</h3>
-          <p>
-            Framework prático de liderança técnica, governança, métricas e cultura de engenharia.
-          </p>
-          <p>
-            <a href="https://github.com/thiagopiellusch/engineering-playbook" target="_blank" style="color:#60a5fa; text-decoration:none; font-weight:600;">
-              Explorar repositório →
-            </a>
-          </p>
+          <div>
+            <span class="badge" style="font-size: 10px;">Leadership</span>
+            <h3>Engineering Playbook</h3>
+            <p>Meu framework de liderança técnica: métricas, rituais de 1:1 e cultura de alta performance.</p>
+          </div>
+          <a href="https://github.com/thiagopiellusch/engineering-playbook" target="_blank" class="card-link">Explorar repositório →</a>
         </div>
 
         <div class="card">
-          <h3>Tech Strategy Notes</h3>
-          <p>
-            Reflexões estratégicas sobre tecnologia, produto, IA e impacto no negócio.
-          </p>
-          <p>
-            <a href="https://github.com/thiagopiellusch/tech-strategy-notes" target="_blank" style="color:#60a5fa; text-decoration:none; font-weight:600;">
-              Explorar repositório →
-            </a>
-          </p>
+          <div>
+            <span class="badge" style="font-size: 10px;">Strategy</span>
+            <h3>Tech Strategy Notes</h3>
+            <p>Notas e reflexões sobre o impacto da tecnologia no negócio e tendências de arquitetura.</p>
+          </div>
+          <a href="https://github.com/thiagopiellusch/tech-strategy-notes" target="_blank" class="card-link">Explorar repositório →</a>
         </div>
 
         <div class="card">
-          <h3>Finance Tracker</h3>
-          <p>
-            Projeto real full-stack demonstrando arquitetura, APIs, frontend e visão de produto.
-          </p>
-          <p>
-            <a href="https://github.com/thiagopiellusch/finance-tracker" target="_blank" style="color:#60a5fa; text-decoration:none; font-weight:600;">
-              Explorar repositório →
-            </a>
-          </p>
+          <div>
+            <span class="badge" style="font-size: 10px;">Architecture</span>
+            <h3>Architecture Lab</h3>
+            <p>Laboratório de padrões arquiteturais, experimentos com Cloud e escalabilidade de sistemas.</p>
+          </div>
+          <a href="https://github.com/thiagopiellusch/architecture-lab" target="_blank" class="card-link">Explorar repositório →</a>
         </div>
 
       </div>
     </section>
 
-
-    <!-- VISÃO -->
     <section id="vision">
       <h2>Visão de Tecnologia</h2>
       <div class="grid">
@@ -325,11 +295,11 @@
         </div>
         <div class="card">
           <h3>Produto & Engenharia</h3>
-          <p>Tecnologia deve ser orientada a produto, dados e impacto real no negócio.</p>
+          <p>A engenharia não deve apenas "codificar", deve entender o ROI e o valor entregue ao cliente final.</p>
         </div>
         <div class="card">
-          <h3>Escala & Governança</h3>
-          <p>Arquitetura, processos e métricas como base para crescimento sustentável.</p>
+          <h3>Cultura de Dono</h3>
+          <p>Sistemas resilientes são construídos por times que possuem autonomia e responsabilidade total (Accountability).</p>
         </div>
       </div>
     </section>
