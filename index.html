@@ -173,6 +173,7 @@
       backdrop-filter: blur(6px);
     }
 
+    /* ✅ CORREÇÃO DO BUG DE CLIQUE */
     .card::after {
       content: "";
       position: absolute;
@@ -180,6 +181,13 @@
       background: linear-gradient(120deg, transparent, rgba(99,102,241,0.12), transparent);
       opacity: 0;
       transition: 0.4s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card > * {
+      position: relative;
+      z-index: 1;
     }
 
     .card:hover::after {
@@ -258,72 +266,6 @@
       text-align: center;
       border-top: 1px solid #1e293b;
       padding: 40px 0;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        padding: 50px 18px;
-      }
-
-      h1 {
-        font-size: 34px;
-      }
-
-      h2 {
-        font-size: 17px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .system-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .profile-header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .profile-img {
-        width: 90px;
-        height: 90px;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      h2 {
-        font-size: 15px;
-        text-align: center;
-      }
-
-      .buttons {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      .card {
-        padding: 20px;
-      }
-
-      .system-grid {
-        grid-template-columns: 1fr;
-      }
-
-      footer {
-        font-size: 12px;
-      }
     }
   </style>
 </head>
