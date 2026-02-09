@@ -34,6 +34,30 @@
       gap: 14px;
     }
 
+    /* Bloco da Foto e Nome */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 8px;
+    }
+
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 2px solid #2563eb;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(37, 99, 235, 0.3);
+      flex-shrink: 0;
+    }
+
+    .name-container {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
     .badge {
       color: #60a5fa;
       font-size: 13px;
@@ -182,6 +206,21 @@
       border-top: 1px solid #1e293b;
       padding: 40px 0;
     }
+
+    /* Responsividade para Celulares */
+    @media (max-width: 600px) {
+      .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -189,8 +228,15 @@
   <div class="container">
 
     <header>
-      <span class="badge">Tech Leadership • AI & Digital Transformation</span>
-      <h1>Thiago Piellusch Tavares</h1>
+      <div class="profile-header">
+        <img src="https://avatars.githubusercontent.com/u/195046431?s=400&u=43a5265ebf4bcca748c09753e7abf7d820202e9b&v=4" alt="Thiago Piellusch Tavares" class="profile-img">
+        
+        <div class="name-container">
+          <span class="badge">Tech Leadership • AI & Digital Transformation</span>
+          <h1>Thiago Piellusch Tavares</h1>
+        </div>
+      </div>
+      
       <h2>
         Liderança de times multidisciplinares focada em <strong>Transformação Digital</strong> e <strong>Hiperautomação</strong>.
         Atuação na unificação de ecossistemas complexos, desenho de arquiteturas escaláveis e maximização de ROI através de
