@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thiago Piellusch Tavares | Tech Leadership • AI & Digital Transformation</title>
+  <title>Thiago Piellusch Tavares | Coordenação & Inovação em Tecnologia</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -22,6 +22,21 @@
       line-height: 1.6;
     }
 
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(800px 400px at 50% -10%, rgba(99,102,241,0.12), transparent),
+                  radial-gradient(600px 300px at 80% 20%, rgba(37,99,235,0.10), transparent);
+      z-index: -1;
+      transition: 0.6s ease;
+    }
+
+    body:hover::before {
+      background: radial-gradient(900px 500px at 20% 10%, rgba(99,102,241,0.18), transparent),
+                  radial-gradient(700px 400px at 90% 30%, rgba(37,99,235,0.16), transparent);
+    }
+
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -34,7 +49,6 @@
       gap: 14px;
     }
 
-    /* Bloco da Foto e Nome */
     .profile-header {
       display: flex;
       align-items: center;
@@ -97,12 +111,27 @@
       font-weight: 600;
       transition: 0.25s;
       background: linear-gradient(180deg, rgba(37,99,235,0.08), transparent);
+      position: relative;
+      overflow: hidden;
     }
 
     .btn.primary {
       background: linear-gradient(135deg, #2563eb, #6366f1);
       color: white;
       border: none;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .btn:hover::before {
+      opacity: 1;
     }
 
     .btn:hover {
@@ -139,11 +168,28 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(6px);
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(99,102,241,0.12), transparent);
+      opacity: 0;
+      transition: 0.4s ease;
+    }
+
+    .card:hover::after {
+      opacity: 1;
     }
 
     .card:hover {
       border-color: #2563eb;
       transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(37,99,235,0.25);
     }
 
     .card h3 {
@@ -196,6 +242,13 @@
       font-size: 13px;
       color: #9ca3af;
       text-align: center;
+      transition: 0.25s;
+    }
+
+    .system-item:hover {
+      background: rgba(37,99,235,0.15);
+      color: #e5e7eb;
+      transform: translateY(-3px);
     }
 
     footer {
@@ -207,18 +260,69 @@
       padding: 40px 0;
     }
 
-    /* Responsividade para Celulares */
+    @media (max-width: 900px) {
+      .container {
+        padding: 50px 18px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-size: 17px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .system-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 600px) {
       .profile-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
-      h1 {
-        font-size: 32px;
+
+      .profile-img {
+        width: 90px;
+        height: 90px;
       }
+
+      h1 {
+        font-size: 28px;
+      }
+
       h2 {
+        font-size: 15px;
         text-align: center;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .system-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        font-size: 12px;
       }
     }
   </style>
@@ -232,20 +336,19 @@
         <img src="https://avatars.githubusercontent.com/u/195046431?s=400&u=43a5265ebf4bcca748c09753e7abf7d820202e9b&v=4" alt="Thiago Piellusch Tavares" class="profile-img">
         
         <div class="name-container">
-          <span class="badge">Tech Leadership • AI & Digital Transformation</span>
+          <span class="badge">Coordenação & Inovação em Tecnologia</span>
           <h1>Thiago Piellusch Tavares</h1>
         </div>
       </div>
       
       <h2>
-        Liderança de times multidisciplinares focada em <strong>Transformação Digital</strong> e <strong>Hiperautomação</strong>.
-        Atuação na unificação de ecossistemas complexos, desenho de arquiteturas escaláveis e maximização de ROI através de
-        <strong>IA, Plataformas Digitais e Estratégias Omnichannel</strong>.
+        Coordenação de tecnologia e inovação com foco em transformação digital, integração de ecossistemas e eficiência operacional.
+        Atuação na conexão entre estratégia de negócio e execução técnica, potencializando resultados por meio de arquitetura, automação e dados.
       </h2>
 
       <div class="buttons">
         <a class="btn primary" href="https://github.com/thiagopiellusch" target="_blank">GitHub</a>
-        <a class="btn" href="#cases">Experiência & ROI</a>
+        <a class="btn" href="#cases">Experiência & Impacto</a>
         <a class="btn" href="#ecosystem">Ecossistema Técnico</a>
         <a class="btn" href="#vision">Visão Estratégica</a>
       </div>
@@ -271,27 +374,26 @@
       <h2>Geração de Valor & Casos Reais</h2>
       <div class="grid">
         <div class="card">
-          <h3>Unificação de Ecossistemas em Escala (M&A)</h3>
+          <h3>Orquestração de Ecossistemas Tecnológicos</h3>
           <p>
-            Liderança técnica e estratégica na consolidação de múltiplas empresas e unidades de negócio,
-            utilizando arquiteturas orientadas a integração e iPaaS para padronizar centenas de fluxos críticos
-            e acelerar o time-to-market.
+            Coordenação de múltiplos sistemas, squads e parceiros tecnológicos, desenhando arquiteturas integradas que reduzem complexidade operacional,
+            aumentam escalabilidade e aceleram a entrega de valor ao negócio.
           </p>
         </div>
 
         <div class="card">
           <h3>Plataformas Digitais & Estratégia Omnichannel</h3>
           <p>
-            Desenho de arquiteturas para e-commerces B2B e B2C de alta transacionalidade,
-            integrando ERPs, OMS, logística e CRM para viabilizar estoque unificado e visão 360º do cliente.
+            Estruturação de plataformas digitais integradas, conectando canais, sistemas corporativos e dados para suportar crescimento,
+            eficiência operacional e melhor experiência do cliente.
           </p>
         </div>
 
         <div class="card">
-          <h3>Hiperautomação & Automação Cognitiva</h3>
+          <h3>Hiperautomação, RPA & Automação Cognitiva</h3>
           <p>
-            Reengenharia de processos operacionais através de integrações, RPA, Agentes de IA e Visão Computacional,
-            reduzindo custos operacionais e permitindo crescimento sem aumento proporcional de headcount.
+            Transformação de processos por meio de integrações, RPA e IA aplicada, reduzindo custos operacionais e aumentando produtividade,
+            com foco em escalabilidade e governança.
           </p>
         </div>
       </div>
@@ -314,16 +416,16 @@
           <div>
             <span class="badge" style="font-size: 10px;">Liderança</span>
             <h3>Engineering Playbook</h3>
-            <p>Framework de liderança técnica: rituais, PDIs, métricas de performance e cultura de alta performance.</p>
+            <p>Modelo de liderança técnica com práticas de gestão, métricas, cultura de engenharia e governança.</p>
           </div>
           <a class="card-link" href="https://github.com/thiagopiellusch/engineering-playbook" target="_blank">Explorar repositório →</a>
         </div>
 
         <div class="card">
           <div>
-            <span class="badge" style="font-size: 10px;">Estratégia Digital</span>
+            <span class="badge" style="font-size: 10px;">Estratégia</span>
             <h3>Tech Strategy Notes</h3>
-            <p>Reflexões sobre transformação digital, arquiteturas omnichannel, IA aplicada e impacto no Ebitda.</p>
+            <p>Análises e frameworks sobre transformação digital, arquitetura corporativa e impacto estratégico da tecnologia.</p>
           </div>
           <a class="card-link" href="https://github.com/thiagopiellusch/tech-strategy-notes" target="_blank">Explorar repositório →</a>
         </div>
@@ -332,34 +434,50 @@
           <div>
             <span class="badge" style="font-size: 10px;">Arquitetura</span>
             <h3>Architecture Lab</h3>
-            <p>Documentação de ADRs, padrões de integração corporativa e estratégias de escalabilidade.</p>
+            <p>Documentação de padrões arquiteturais, integrações corporativas e decisões técnicas estratégicas.</p>
           </div>
           <a class="card-link" href="https://github.com/thiagopiellusch/architecture-lab" target="_blank">Explorar repositório →</a>
+        </div>
+
+        <div class="card">
+          <div>
+            <span class="badge" style="font-size: 10px;">Gestão & Inovação</span>
+            <h3>Technology Operating Model</h3>
+            <p>Estrutura conceitual de organização de tecnologia, papéis, fluxos decisórios e modelos de governança aplicados à coordenação de TI.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <span class="badge" style="font-size: 10px;">Produto & Negócio</span>
+            <h3>Digital Value Framework</h3>
+            <p>Modelo de priorização de iniciativas digitais baseado em impacto de negócio, risco tecnológico e retorno sobre investimento.</p>
+          </div>
         </div>
 
       </div>
     </section>
 
     <section id="vision">
-      <h2>Visão Tecnológica</h2>
+      <h2>Visão Estratégica</h2>
       <div class="grid">
         <div class="card">
-          <h3>Cultura AI-First</h3>
-          <p>IA aplicada de forma pragmática para amplificar o talento humano e gerar vantagem competitiva sustentável.</p>
+          <h3>Tecnologia como Plataforma de Negócio</h3>
+          <p>Infraestrutura e arquitetura como base para inovação contínua e competitividade organizacional.</p>
         </div>
         <div class="card">
-          <h3>Arquitetura como Alavanca de Negócio</h3>
-          <p>Sistemas desacoplados, governáveis e orientados a integração como base para crescimento e resiliência.</p>
+          <h3>Coordenação como Diferencial</h3>
+          <p>Integração entre times, processos e sistemas como fator crítico para performance e previsibilidade tecnológica.</p>
         </div>
         <div class="card">
-          <h3>Engenharia Orientada a Resultado</h3>
-          <p>Decisões técnicas pautadas por ROI, mitigação de riscos e alinhamento estratégico com o board.</p>
+          <h3>Inovação com Governança</h3>
+          <p>Equilíbrio entre experimentação, controle e geração de valor sustentável para o negócio.</p>
         </div>
       </div>
     </section>
 
     <footer>
-      © 2026 — Thiago Piellusch Tavares | Tech Leadership • AI & Digital Transformation
+      © 2026 — Thiago Piellusch Tavares | Coordenação & Inovação em Tecnologia
     </footer>
 
   </div>
